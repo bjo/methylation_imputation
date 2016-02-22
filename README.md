@@ -2,20 +2,20 @@
 
 # bed file format
 
-In the data directory, you will find a set of .bed files for each chromosome. These files are tab-separated files that are of this format:
+In the data directory, you will find a set of .bed files for each chromosome. These files are tab-separated files that are of the following format:
 
 | Column      | Name          | Description   |
 | ----------- | ------------- | ------------- |
 | 1           | chromosome              | chromosome of the methylation site |
 | 2           | start position          | position of the methylated C (inclusive, think of this as the start of methylation site) |
 | 3           | end position            | position of the G following the methylated C (exclusive, think of this as the end of methylation site) |
-| 4           | strand                  | + or - depending on whether it is on 5’-3’ or 3’-5' |
-| 5 ~ (5+k-1) | methylation value calls | corrected methylation value for each sample |
-| 5 + k       | hg                      |  0 or 1, 1 if the position defined by columns 1,2,3 is present on the Illumina 450K chip |
+| 4           | strand                  | + or -, depending on whether the site is on the 5’-3’ or 3’-5' strand |
+| 5 ~ (5+k-1) | methylation value calls | methylation value calls for each sample |
+| 5 + k       | hg                      | 0 or 1, 1 if this position is present on the Illumina 450K chip |
 
 # Input data
 
-We have provided data from 5 chromosomes: 1, 2, 6, 7 and 11. For each chromosome, you are given 3 files:
+We have provided data for 5 chromosomes: 1, 2, 6, 7 and 11. For each chromosome, you are given 3 files:
 
 ### intersected_final_chrN_cutoff_20_train.bed (Training data)
 
@@ -46,7 +46,7 @@ The naming convention "intersected_final_chrN_cutoff_20_" comes from the process
 
 # Honor code
 
-In this exercise, you are free to use the sample that we provided as the prediction benchmark, or select other samples (or a set of samples) to use as your prediction benchmark. In the test set, you are also allowed to use information from the rows for which the last column entry is 1 (you observe them from the 450K chip). In addition, you are also allowed to use other genomic annotations ([GENCODE annotations](http://www.gencodegenes.org/releases/19.html) and [ENCODE annotations](https://www.encodeproject.org/data/annotations/) are good places to start.)
+In this exercise, you are free to use all the information provided in the training set, or choose an alternate set of samples to use as your training set. In the test set, you are also allowed to use information from the rows for which the last column entry is 1 (you observe them from the 450K chip). In addition, you are also allowed to use other genomic annotations ([GENCODE annotations](http://www.gencodegenes.org/releases/19.html) and [ENCODE annotations](https://www.encodeproject.org/data/annotations/) are good places to start.)
 
 ### The information you are NOT permitted to use are information from your test set from rows where the last column value is 0. In the sample_partial.bed file, these values are masked for you. You SHOULD also mask these values from other samples if you intend to use them as your test sample. You are also not permitted to use any previous scholarly work that report methylation values directly in certain loci (and in a lot of cases, this information will hurt you rather than help you. Think about why that would be).
 
