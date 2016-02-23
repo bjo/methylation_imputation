@@ -48,7 +48,7 @@ The naming convention "intersected_final_chrN_cutoff_20_" comes from the process
 
 In this exercise, you are free to use all the information provided in the training set, or choose an alternate set of samples to use as your training set. In the test set, you are also allowed to use information from the rows for which the last column entry is 1 (you observe them from the 450K chip). In addition, you are also allowed to use other genomic annotations ([GENCODE annotations](http://www.gencodegenes.org/releases/19.html) and [ENCODE annotations](https://www.encodeproject.org/data/annotations/) are good places to start.)
 
-### The information you are NOT permitted to use are information from your test set from rows where the last column value is 0. In the sample_partial.bed file, these values are masked for you. You SHOULD also mask these values from other samples if you intend to use them as your test sample. You are also not permitted to use any previous scholarly work that report methylation values directly in certain loci (and in a lot of cases, this information will hurt you rather than help you. Think about why that would be).
+### The information you are NOT permitted to use are information from your test set from rows where the last column value is 0. In the sample_partial.bed file, these values are masked for you. You SHOULD also mask these values from other samples if you intend to use them as your test sample.
 
 We have checks in place to make sure that you're not:
 
