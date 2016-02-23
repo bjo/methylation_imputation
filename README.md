@@ -1,4 +1,4 @@
-# COS424 Homework 2, Methylation Data Imputation
+# COS424 Homework 2, Imputing Methylation Status
 
 # bed file format
 
@@ -38,7 +38,7 @@ The sample_partial.bed file contains partial information from a held-out sample.
 
 Your goal in this assignment is to use the information from the train.bed file and the positions defined (not 'nan') in the sample_partial.bed file in order to predict the values that are provided in sample_full.bed file. 
 
-Alternatively, although we have held out one sample out of 34, and separated it into sample_partial and sample_full files, you may look at the performance of your methods in other samples in the training set as well (using values from only the rows for which the last column is 1). You can also think about separating the 34 samples into two sets (training and test sets), except in this case you will have partial information on the test set (information from the 450K chip, or the rows in which the last column value is 1). As you may have guessed by now, our choice of training vs. test sample is arbitrary, and you are free to provide us with additional metric to evaluate your performance, as long as you don't cheat (i.e. use information from the test set other than the allowed rows). The terms of honor code are outlined in further detail below.
+Alternatively, although we have held out one sample out of 34, and separated it into sample_partial and sample_full files, you may look at the performance of your methods in other samples in the training set as well (using values from only the rows for which the last column is 1). You can also think about separating the 34 samples into two sets (training and test sets), except in this case you will have partial information on the test set (information from the 450K chip, or the rows in which the last column value is 1). As you may have guessed by now, our choice of training vs. test sample was put in place to help you, but you are still free to provide us with additional metric to evaluate your performance, as long as you don't cheat (i.e. use information from the test set other than the allowed rows). The terms of honor code are outlined in further detail below.
 
 # Handling missing data
 
