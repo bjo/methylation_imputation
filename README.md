@@ -1,5 +1,9 @@
 # COS424 Homework 2, Imputing Methylation Status
 
+First things first, remember to unzip all files under your data directory!
+
+gzip -d data/*
+
 # bed file format
 
 In the data directory, you will find a set of .bed files for each chromosome. These files are tab-separated files that are of the following format:
